@@ -1,0 +1,3 @@
+Hello Starboy!
+This is a sample text file.
+Python file handling is easy.

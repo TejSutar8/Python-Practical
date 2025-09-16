@@ -1,14 +1,17 @@
 # 1. Demonstrate the zero division error and overflow error.
-def zero_division_and_overflow():
-    try:
-        a = 1 / 0
-    except ZeroDivisionError as e:
-        print("ZeroDivisionError:", e)
-    try:
-        import math
-        b = math.exp(1000)
-    except OverflowError as e:
-        print("OverflowError:", e)
+import math
 
-if __name__ == "__main__":
-    zero_division_and_overflow()
+# Demonstrate ZeroDivisionError
+try:
+    num1 = int(input("Enter numerator: "))
+    num2 = int(input("Enter denominator: "))
+    result = num1 / num2
+except ZeroDivisionError as e:
+    print("ZeroDivisionError caught:", e)
+
+# Demonstrate OverflowError
+
+try:
+    result = math.exp(1000)  # Exponentially large number
+except OverflowError as e:
+    print("OverflowError caught:", e)

@@ -1,12 +1,11 @@
-# 3. Write a Python script to print the current date in following format "Sun May 29 02:26:23 IST 2017"
-import datetime
-import time
+# Program to print current date in given format
 
-def print_formatted_date():
-    now = datetime.datetime.now()
-    # Format: Day Mon DD HH:MM:SS IST YYYY
-    formatted = now.strftime('%a %b %d %H:%M:%S IST %Y')
-    print(formatted)
+from datetime import datetime
 
-if __name__ == "__main__":
-    print_formatted_date()
+# Get current date and time
+now = datetime.now()
+
+# Format: "Sun May 29 02:26:23 IST 2017"
+formatted_date = now.strftime("%a %b %d %H:%M:%S IST %Y")
+
+print("Current date and time:", formatted_date)

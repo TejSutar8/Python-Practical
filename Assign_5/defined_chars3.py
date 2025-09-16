@@ -1,10 +1,14 @@
 # 3. Check if string contains only defined characters using Regex
+
 import re
 
-def only_defined_chars(text, allowed):
-    pattern = f'^[{re.escape(allowed)}]+$'
-    return bool(re.match(pattern, text))
+# User input
+text = input("Enter a string: ")
 
-if __name__ == "__main__":
-    print(only_defined_chars('abc123', 'abc123'))  # Output: True
-    print(only_defined_chars('abc123!', 'abc123'))  # Output: False
+# Define allowed characters (a-z, A-Z, 0-9, and _)
+pattern = r'^[a-zA-Z0-9_]+$'
+
+if re.fullmatch(pattern, text):
+    print("✅ String contains only defined characters")
+else:
+    print("❌ String contains characters outside the allowed set")

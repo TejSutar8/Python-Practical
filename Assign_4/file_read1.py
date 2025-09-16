@@ -1,8 +1,13 @@
-# 1. Write a Python program to read an entire text file.
-def read_entire_file(filename):
-    with open(filename, 'r') as f:
-        return f.read()
+# Program to read an entire text file
 
-if __name__ == "__main__":
-    # Example usage: print(read_entire_file('sample.txt'))
-    pass
+# Open the file in read mode
+file = open("Assign_4/sample1.txt", "r")
+
+# Read the entire file
+content = file.read()
+
+print("Contents of the file:\n")
+print(content)
+
+# Close the file
+file.close()

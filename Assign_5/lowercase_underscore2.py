@@ -1,8 +1,14 @@
 # 2. Find sequences of lowercase letters joined with an underscore
 import re
 
-def find_sequences(text):
-    return re.findall(r'[a-z]+_[a-z]+', text)
+# Sample text
+text = "hello_world this_is a_Test not_valid one_more"
 
-if __name__ == "__main__":
-    print(find_sequences('abc_def ghi_jkl mnoP_qrs'))  # Output: ['abc_def', 'ghi_jkl']
+# Pattern: lowercase + underscore + lowercase
+pattern = r'\b[a-z]+_[a-z]+\b'
+
+matches = re.findall(pattern, text)
+
+print("Sequences of lowercase letters joined with underscore:")
+for match in matches:
+    print(match)
