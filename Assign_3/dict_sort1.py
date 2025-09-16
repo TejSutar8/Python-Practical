@@ -1,8 +1,14 @@
-# 1. Write a Python script to sort (ascending and descending) a dictionary by value
-def sort_dict_by_value(d, reverse=False):
-    return dict(sorted(d.items(), key=lambda item: item[1], reverse=reverse))
+# Program to sort a dictionary by value
 
-if __name__ == "__main__":
-    d = {'a': 3, 'b': 1, 'c': 2}
-    print(sort_dict_by_value(d))      # Output: {'b': 1, 'c': 2, 'a': 3}
-    print(sort_dict_by_value(d, True)) # Output: {'a': 3, 'c': 2, 'b': 1}
+# Sample dictionary
+my_dict = {'apple': 5, 'banana': 2, 'cherry': 8, 'mango': 1}
+
+print("Original dictionary:", my_dict)
+
+# Sort by value (ascending)
+asc_sort = dict(sorted(my_dict.items(), key=lambda item: item[1]))
+print("Dictionary sorted by value (ascending):", asc_sort)
+
+# Sort by value (descending)
+desc_sort = dict(sorted(my_dict.items(), key=lambda item: item[1], reverse=True))
+print("Dictionary sorted by value (descending):", desc_sort)

@@ -1,8 +1,11 @@
-# 2. Write a Python script to add a key to a dictionary
-def add_key_to_dict(d, key, value):
-    d[key] = value
-    return d
+# Program to add a key to a dictionary
 
-if __name__ == "__main__":
-    d = {'a': 1, 'b': 2}
-    print(add_key_to_dict(d, 'c', 3))  # Output: {'a': 1, 'b': 2, 'c': 3}
+# Initial dictionary
+my_dict = {1: 'Apple', 2: 'Banana'}
+
+print("Original dictionary:", my_dict)
+
+# Adding a new key-value pair
+my_dict[3] = 'Cherry'
+
+print("Updated dictionary:", my_dict)
